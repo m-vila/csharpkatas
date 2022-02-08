@@ -37,6 +37,8 @@ namespace FizzBuzzKata
 
         [Theory]
         [InlineData(15, "FizzBuzz")]
+        [InlineData(30, "FizzBuzz")]
+        [InlineData(45, "FizzBuzz")]
         public void ReturnFizzBuzzWhenMultipleOf3And5(int number, string expected)
         {
             var result = FizzBuzzer.FizzBuzz(number);
