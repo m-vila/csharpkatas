@@ -11,5 +11,12 @@ namespace FizzBuzzKata
             var result = FizzBuzzer.FizzBuzz(1);
             result.Should().Be(1);
         }
+
+        [Fact]
+        public void ReturnTwoWhenTwo()
+        {
+            var result = FizzBuzzer.FizzBuzz(2);
+            result.Should().Be(2);
+        }
     }
 }
