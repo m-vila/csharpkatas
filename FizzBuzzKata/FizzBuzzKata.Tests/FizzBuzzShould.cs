@@ -5,20 +5,17 @@ namespace FizzBuzzKata
 {
     public class FizzBuzzShould
     {
-        [Fact]
-        public void ReturnOneWhenOne()
-        {
-            var result = FizzBuzzer.FizzBuzz(1);
-            result.Should().Be(1);
-        }
 
-        [Fact]
-        public void ReturnTwoWhenTwo()
+        [Theory]
+        [InlineData(1,1)]
+        [InlineData(2,2)]
+        [InlineData(4,4)]
+        public void ReturnTheSameInputNumber(int number, int expected)
         {
-            var result = FizzBuzzer.FizzBuzz(2);
-            result.Should().Be(2);
+            var result = FizzBuzzer.FizzBuzz(number);
+            result.Should().Be(expected);
         }
-
+        
         [Fact]
         public void ReturnFizzWhen3()
         {
@@ -26,11 +23,5 @@ namespace FizzBuzzKata
             result.Should().Be("Fizz");
         }
 
-        [Fact]
-        public void Return4When4()
-        {
-            var result = FizzBuzzer.FizzBuzz(4);
-            result.Should().Be(4);
-        }
-    }
+     }
 }
