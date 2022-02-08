@@ -15,27 +15,24 @@ namespace FizzBuzzKata
             var result = FizzBuzzer.FizzBuzz(number);
             result.Should().Be(expected);
         }
-        
-        [Fact]
-        public void ReturnFizzWhen3()
-        {
-            var result = FizzBuzzer.FizzBuzz(3); 
-            result.Should().Be("Fizz");
-        }
 
-        [Fact]
+        [Theory]
+        [InlineData(3, "Fizz")]
+        [InlineData(6, "Fizz")]
+        [InlineData(9, "Fizz")]
+        public void ReturnFizzWhenMultipleOf3(int number, string expected)
+        {
+            var result = FizzBuzzer.FizzBuzz(number);
+            result.Should().Be(expected);
+        }
+        
+       [Fact]
         public void ReturnBuzzWhen5()
         {
             var result = FizzBuzzer.FizzBuzz(5); 
             result.Should().Be("Buzz");
         }
 
-        [Fact]
-        public void ReturnFizzWhen6()
-        {
-            var result = FizzBuzzer.FizzBuzz(6); 
-            result.Should().Be("Fizz");
-        }
-
+        
      }
 }
