@@ -23,5 +23,12 @@ namespace FizzBuzzKata
             result.Should().Be("Fizz");
         }
 
+        [Fact]
+        public void ReturnBuzzWhen5()
+        {
+            var result = FizzBuzzer.FizzBuzz(5); 
+            result.Should().Be("Buzz");
+        }
+
      }
 }
