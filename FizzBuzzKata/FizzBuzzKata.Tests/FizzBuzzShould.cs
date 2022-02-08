@@ -1,7 +1,7 @@
 using FluentAssertions;
 using Xunit;
 
-namespace FizzBuzzKata
+namespace FizzBuzzKata.Tests
 {
     public class FizzBuzzShould
     {
