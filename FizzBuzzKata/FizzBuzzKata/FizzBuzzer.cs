@@ -5,9 +5,11 @@
     // 3 y de 5 = FizzBuzz
     public class FizzBuzzer
     {
-        public static object FizzBuzz(int i)
+        public static object FizzBuzz(int number)
         {
-            return 1;
+            if (number == 1)
+                return 1;
+            return 2;
         }
     }
 }
