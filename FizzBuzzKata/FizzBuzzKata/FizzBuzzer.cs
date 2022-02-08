@@ -7,7 +7,7 @@
     {
         public static object FizzBuzz(int i)
         {
-            throw new System.NotImplementedException();
+            return 1;
         }
     }
 }
